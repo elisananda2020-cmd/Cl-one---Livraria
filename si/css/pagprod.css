@@ -1,0 +1,222 @@
+/* --- CONFIGURAÇÕES GERAIS --- */
+:root {
+    --primary-gold: #b38b59;
+    --dark-bg: #0d0d0d;
+    --text-gray: #888;
+    --white: #ffffff;
+}
+
+body {
+    background-color: var(--dark-bg);
+    color: var(--white);
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+}
+
+main {
+    padding: 120px 20px 60px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* --- GRID PRINCIPAL DO PRODUTO --- */
+.produto-detalhes-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    gap: 50px;
+    align-items: start;
+}
+
+/* --- GALERIA --- */
+.galeria-produto {
+    display: flex;
+    justify-content: center;
+}
+
+.imagem-principal img {
+    width: 100%;
+    max-width: 450px;
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease;
+}
+
+.imagem-principal img:hover {
+    transform: scale(1.02);
+}
+
+/* --- INFORMAÇÕES DO PRODUTO --- */
+.info-produto {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.titulo-produto {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    margin: 0;
+}
+
+.autor {
+    color: var(--primary-gold);
+    font-size: 1.1rem;
+    margin: 0;
+}
+
+.preco-atual {
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--white);
+    margin: 10px 0;
+}
+
+.avaliacao-stars {
+    color: #ffcc00;
+    font-size: 0.9rem;
+}
+
+.descricao-curta {
+    line-height: 1.6;
+    color: var(--text-gray);
+    border-left: 3px solid var(--primary-gold);
+    padding-left: 15px;
+}
+
+/* --- OPÇÕES DE COMPRA --- */
+.opcoes-compra {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 20px 0;
+    border-top: 1px solid #222;
+    border-bottom: 1px solid #222;
+}
+
+.input-quantidade {
+    width: 60px;
+    padding: 10px;
+    background: #1a1a1a;
+    border: 1px solid #333;
+    color: white;
+    border-radius: 4px;
+}
+
+.btn-comprar {
+    background-color: var(--primary-gold);
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    font-weight: 600;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: 0.3s;
+    flex-grow: 1;
+}
+
+.btn-comprar:hover {
+    background-color: #967347;
+    transform: translateY(-2px);
+}
+
+.detalhes-tecnicos h3 {
+    font-size: 1.1rem;
+    color: var(--primary-gold);
+    margin-bottom: 10px;
+}
+
+.detalhes-tecnicos ul {
+    list-style: none;
+    padding: 0;
+    color: var(--text-gray);
+    font-size: 0.9rem;
+}
+
+/* --- SEÇÃO DE COMENTÁRIOS --- */
+.subl {
+    margin-top: 80px;
+}
+
+.titulo_text {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.form-comentario {
+    display: grid;
+    gap: 15px;
+    background: #111;
+    padding: 25px;
+    border-radius: 8px;
+    margin-bottom: 40px;
+}
+
+.form-comentario textarea {
+    width: 100%;
+    background: #1a1a1a;
+    border: 1px solid #333;
+    color: white;
+    padding: 15px;
+    border-radius: 4px;
+    resize: vertical;
+}
+
+.comentario-item {
+    background: #111;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    border-left: 2px solid #333;
+}
+
+.comentario-autor {
+    font-weight: 600;
+    color: var(--primary-gold);
+    margin-bottom: 5px;
+}
+
+.comentario-data {
+    display: block;
+    font-size: 0.75rem;
+    color: #555;
+    margin-top: 10px;
+}
+
+.btn-button {
+    background: transparent;
+    border: 1px solid var(--primary-gold);
+    color: var(--primary-gold);
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-button:hover {
+    background: var(--primary-gold);
+    color: white;
+}
+
+/* --- RESPONSIVIDADE --- */
+@media (max-width: 992px) {
+    .produto-detalhes-container {
+        grid-template-columns: 1fr; 
+        text-align: center;
+    }
+
+    .descricao-curta {
+        border-left: none;
+        border-top: 3px solid var(--primary-gold);
+        padding-top: 15px;
+        padding-left: 0;
+    }
+
+    .opcoes-compra {
+        justify-content: center;
+    }
+
+    .imagem-principal img {
+        max-width: 300px;
+    }
+}

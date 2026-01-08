@@ -1,0 +1,91 @@
+/* --- FOOTER GERAL --- */
+.main-footer {
+    background-color: #0d0d0d;
+    padding: 80px 0 40px;
+    border-top: 1px solid #222;
+    color: #888;
+    font-family: 'Inter', sans-serif;
+}
+
+.footer-column .logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    color: #b38b59;
+    text-decoration: none;
+    margin-bottom: 20px;
+}
+
+.footer-column h4 {
+    color: #b38b59;
+    font-family: 'Playfair Display', serif;
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.social-title {
+    font-size: 0.9rem !important;
+    margin-top: 30px !important;
+    margin-bottom: 15px !important;
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links li { margin-bottom: 12px; }
+
+.footer-links a {
+    color: #888;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.footer-links a:hover {
+    color: #b38b59;
+    padding-left: 5px;
+}
+
+/* --- REDES SOCIAIS (Ícones com Imagem) --- */
+.social-icons {
+    display: flex;
+    gap: 12px;
+}
+
+.social-icons a {
+    width: 40px;
+    height: 40px;
+    border: 1px solid #333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: 0.3s;
+}
+
+.social-icons a img {
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+    filter: brightness(0) saturate(100%) invert(64%) sepia(17%) saturate(1099%) hue-rotate(352deg) brightness(89%) contrast(83%);
+}
+
+.social-icons a:hover {
+    background: #b38b59;
+    border-color: #b38b59;
+    transform: translateY(-3px);
+}
+
+.social-icons a:hover img {
+    filter: brightness(0) invert(1); 
+}
+
+.footer-bottom {
+    margin-top: 50px;
+    padding-top: 30px;
+    border-top: 1px solid #222;
+    text-align: center;
+    font-size: 0.85rem;
+}
