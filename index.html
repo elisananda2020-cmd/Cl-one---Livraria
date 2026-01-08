@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clíone | Livraria de Mitos e Lendas</title>
+    <link rel="icon" type="image/png" href="img/download.jpg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@300;400;600&display=swap"
+        rel="stylesheet">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/css_index.css">
+    <link rel="stylesheet" href="css/rodape.css">
+    <link rel="stylesheet" href="css/cabecalho.css">
+    <link rel="stylesheet" href="css/inframe.css">
+
+
+
+</head>
+
+<body>
+
+    <!--CABECALHO-->
+    <header class="main-header">
+        <div class="container header-content">
+            <button class="mobile-menu-icon" onclick="toggleMobileMenu()">
+                <i class="fas fa-bars"></i>
+            </button>
+
+            <a href="index.html" class="logo">CLÍONE</a>
+
+            <div class="header-search">
+                <input type="text" class="search-bar" placeholder="Buscar mitos...">
+            </div>
+
+            <nav class="main-nav" id="mainNav">
+                <ul>
+                  <li><a href="index.html">Início</a></li>
+                    <li class="dropdown">
+                        <a href="produtos.html" class="dropbtn">Livros</a>
+                        <div class="dropdown-content">
+                            <a href="produtos.html">Mitologia Grega</a>
+                            <a href="produtos.html">Mitologia Nórdica</a>
+                            <a href="produtos.html">Folclore Brasileiro</a>
+                        </div>
+                    </li>
+                    <li><a href="sobre.html">Sobre Nós</a></li>
+                    <li class="dropdown">
+                        <a href="cadastro.html" class="dropbtn">Minha Conta</a>
+                        <div class="dropdown-content">
+                            <a href="cadastro.html">Meu Usuário</a>
+                            <a href="javascript:void(0)" onclick="toggleCart()">Meu Carrinho</a>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+
+            <div class="header-actions">
+                <a href="javascript:void(0)" class="action-icon" onclick="toggleCart()">
+                    <i class="fas fa-shopping-bag"></i>
+                    <span class="cart-count">0</span>
+                </a>
+            </div>
+        </div>
+    </header>
+    <!--CABECALHO-->
+
+    <!--BANNER-->
+    <section class="hero-banner"
+        style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('img/Lucius.jpg');">
+        <div class="container reveal-item">
+            <div class="highlight-chip"> A maior livraria mitológica do Brasil</div>
+            <h1>Desvende os segredos <br> dos Deuses Antigos</h1>
+            <p>Obras raras e clássicas sobre mitologias de todos os cantos do mundo.</p>
+            <a href="#lancamentos" class="cta-button">Explorar Acervo</a>
+        </div>
+    </section>
+    <!--BANNER-->
+
+    <!--CARROSSEL-->
+    <section class="panteao-section">
+        <div class="container">
+            <div class="reveal-item text-center mb-5">
+                <h2 style="font-family: 'Playfair Display'; font-size: 3rem;">Explore por Panteão</h2>
+                <p style="color: #888;">Navegue pelas grandes civilizações e seus mitos</p>
+            </div>
+
+            <div id="carouselPanteao" class="carousel slide reveal-item" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselPanteao" data-bs-slide-to="0"
+                        class="active"></button>
+                    <button type="button" data-bs-target="#carouselPanteao" data-bs-slide-to="1"></button>
+                    <button type="button" data-bs-target="#carouselPanteao" data-bs-slide-to="2"></button>
+                    <button type="button" data-bs-target="#carouselPanteao" data-bs-slide-to="3"></button>
+
+                </div>
+
+                <div class="carousel-inner">
+                    <div class="carousel-item active" data-bs-interval="5000">
+                        <div class="slide-wrapper">
+                            <div class="slide-text">
+                                <h3>Grécia Antiga</h3>
+                                <p>Do caos primordial ao brilho do Monte Olimpo. Explore as tragédias, os heróis como
+                                    Hércules e a sabedoria de Atena em edições de luxo comentadas.</p>
+                                <a href="#" class="cta-button">Ver Acervo Grego</a>
+                            </div>
+                            <div class="slide-image">
+                                <img src="img/Perseo, el héroe que mató a Medusa, la terrorífica gorgona.jpg"
+                                    alt="Grécia">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item" data-bs-interval="5000">
+                        <div class="slide-wrapper">
+                            <div class="slide-text">
+                                <h3>Folclore Brasileiro</h3>
+                                <p>Explore as impressionantes lendas e mitos dos povos originários do território
+                                    brasileiro. Nossa sessão nacional conta com centenas de livros, artigos e contos,
+                                    buscando apresentar e ressignificar a cultura brasileira. </p>
+                                <a href="#" class="cta-button">Ver Acervo Nacional</a>
+                            </div>
+                            <div class="slide-image">
+                                <img src="img/Poster Folclore.jpg" alt="Brasil">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item" data-bs-interval="5000">
+                        <div class="slide-wrapper">
+                            <div class="slide-text">
+                                <h3>Egito dos Faraós</h3>
+                                <p>Desvende os mistérios do Livro dos Mortos e o julgamento de Osíris. Obras que
+                                    exploram a eternidade e os segredos das pirâmides.</p>
+                                <a href="#" class="cta-button">Ver Acervo Egípcio</a>
+                            </div>
+                            <div class="slide-image">
+                                <img src="img/download.jpg" alt="Egito">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="carousel-item" data-bs-interval="5000">
+                        <div class="slide-wrapper">
+                            <div class="slide-text">
+                                <h3>Sol Nascente</h3>
+                                <p>Mergulhe no Kojiki e nas lendas dos Yokais e Kami. A delicadeza e o terror do
+                                    folclore japonês em traduções ilustradas.</p>
+                                <a href="#" class="cta-button">Ver Acervo Japonês</a>
+                            </div>
+                            <div class="slide-image">
+                                <img src="img/Mundo-Nipo - O Portal do Japão - Notícias e Cultura desde 2008.jpg"
+                                    alt="Japão">
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+
+
+
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselPanteao"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselPanteao"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                </button>
+
+            </div>
+        </div>
+    </section>
+    <!--CARROSSEL-->
+
+    <!--LANÇAMENTO-->
+    <section class="container" id="lancamentos" style="padding: 100px 0;">
+        <h2 class="reveal-item" style="margin-bottom: 3rem; font-family: 'Playfair Display'; font-size: 2.5rem;">Os Mais
+            Lidos</h2>
+        <div class="product-grid">
+            <div class="product-card reveal-item">
+                <div class="badge-tag">Destaque</div>
+                <a href="paginaProduto.html"><img src="img/f2.jpg" alt="Livro"></a>
+                <div class="product-info">
+                    <h4 style="margin: 0;">O grande livro da mitologia Egípcia</h4>
+                    <p style="color: var(--primary-gold); font-weight: bold; margin: 10px 0;">R$ 49,90</p>
+                    <button class="add-to-cart-btn" onclick="updateCartCount()">Adicionar  à sacola</button>
+                </div>
+            </div>
+            <div class="product-card reveal-item">
+                <div class="badge-tag" style="background: var(--primary-gold);">-20%</div>
+                <a href="paginaProduto.html"><img src="img/f1.jpg" alt="O Grande Livro da Mitologia Egípcia"></a>
+                <div class="product-info">
+                    <h4 style="margin: 0;">O Livro de Ouro da Mitologia</h4>
+                    <p style="color: var(--primary-gold); font-weight: bold; margin: 10px 0;">R$ 65,00</p>
+                    <button class="add-to-cart-btn" onclick="updateCartCount()">Adicionar à sacola</button>
+                </div>
+            </div>
+            <div class="product-card reveal-item">
+                <div class="badge-tag" style="background: var(--primary-gold);">-20%</div>
+                <a href="paginaProduto.html"><img src="img/f3.jpg" alt="O Grande Livro da Mitologia Egípcia"></a>
+                <div class="product-info">
+                    <h4 style="margin: 0;">Mitologia Nórdica</h4>
+                    <p style="color: var(--primary-gold); font-weight: bold; margin: 10px 0;">R$ 95,90</p>
+                    <button class="add-to-cart-btn" onclick="updateCartCount()">Adicionar  à sacola</button>
+                </div>
+            </div>
+            <div class="product-card reveal-item">
+                <div class="badge-tag" style="background: var(--primary-gold);">-20%</div>
+                <a href="paginaProduto.html"><img src="img/f4.jpg" alt="O Grande Livro da Mitologia Egípcia"></a>
+                <div class="product-info">
+                    <h4 style="margin: 0;">Ragnarok</h4>
+                    <p style="color: var(--primary-gold); font-weight: bold; margin: 10px 0;">R$ 129,90</p>
+                    <button class="add-to-cart-btn" onclick="updateCartCount()">Adicionar  à sacola</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--LANCAMENTO-->
+
+    </main>
+
+    <!--RODAPE-->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6 footer-column">
+                    <a href="#" class="logo mb-4 d-block">CLÍONE</a>
+                    <p>Preservando a sabedoria das eras. A Clíone é especializada em curadoria de obras raras,
+                        mitologias clássicas e lendas esquecidas, entregando o sagrado em forma de papel e tinta.</p>
+
+                    <h4 class="social-title">Nossas Redes Sociais</h4>
+                    <div class="social-icons">
+                        <a href="#"><img src="img/download-_1_.svg" alt="instagram"></a>
+                        <a href="#"><img src="img/download-_2_.svg" alt="whatsapp"></a>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 footer-column">
+                    <h4>Explorar</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Novidades</a></li>
+                        <li><a href="#">Mais Vendidos</a></li>
+                        <li><a href="#">Edições de Luxo</a></li>
+                        <li><a href="#">Mitos Gregos</a></li>
+                        <li><a href="#">Folclore</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-3 col-md-6 footer-column">
+                    <h4>Suporte</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Envio e Prazos</a></li>
+                        <li><a href="#">Trocas e Devoluções</a></li>
+                        <li><a href="#">Minha Conta</a></li>
+                        <li><a href="#">Privacidade</a></li>
+                        <li><a href="#">Contato</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2024 Clíone Livraria. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+    <!--RODAPE-->
+
+    <!--INFRAME-->
+    <div class="contato-flutuante" id="contatoFlutuante">
+        <div class="menu-contato" id="menuContato">
+            <div class="menu-contato-header">
+                <span>Contatos Clíone</span>
+                <button onclick="toggleContato()">&times;</button>
+            </div>
+            <ul class="contato-links">
+                <li><a href="https://wa.me/556899999999" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+                </li>
+                <li><a href="mailto:contato@clione.com.br"><i class="far fa-envelope"></i> E-mail</a></li>
+                <li><a href="tel:+556832220000"><i class="fas fa-phone"></i> Telefone</a></li>
+                <li><a href="https://instagram.com/clione" target="_blank"><i class="fab fa-instagram"></i>
+                        Instagram</a></li>
+            </ul>
+        </div>
+
+        <button class="btn-contato-principal" onclick="toggleContato()">
+            <i class="fas fa-comments"></i>
+        </button>
+    </div>
+    <!--INFRAME-->
+
+    <!--SACOLA-->
+    <div id="cartOverlay" class="cart-overlay" onclick="toggleCart()"></div>
+
+    <div id="cartSidebar" class="cart-sidebar">
+        <div class="cart-header">
+            <h3>Meu Carrinho</h3>
+            <button onclick="toggleCart()">&times;</button>
+        </div>
+        <div class="cart-body">
+            <p>Seu carrinho está vazio.</p>
+        </div>
+        <div class="cart-footer">
+            <button class="btn-comprar" style="width: 100%;">Finalizar Compra</button>
+        </div>
+    </div>
+    <!--SACOLA-->
+
+    <!--SCRIPTS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="css/js_arq.js"></script>
+
+</body>
+
+</html>
